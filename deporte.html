@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="less/main.less" />
+    <title>Tablas con HBS y variables en DataTarea</title>
+  </head>
+  <body>
+    {{>header}}
+    <main>
+      <section class="tabladeportes">
+        <h1>Tabla de Deporte</h1>
+        <table id="tabla">
+          <thead>
+            <tr>
+              <th>Nombre del Deporte</th>
+              <th>Descripción</th>
+              <th>Requisitos</th>
+              <th>Ranking</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpotabla">
+            {{#each tabla}}
+            {{>tabla this}}
+    {{/each}}
+
+          </tbody>
+        </table>
+
+      </section>
+    </main>
+  </body>
+</html>

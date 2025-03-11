@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="less/main.less" />
+  <title>Panel de Testimonios</title>
+</head>
+{{>header}}
+
+<body>
+  <section class="panel">
+    <div class="introduccion">
+      <h1>Opiniones de Invincible</h1>
+      <p>
+        Cuentanos tu opinion de la famosa serie Invincible.
+      </p>
+      <img src="img/Mark Grayson (Invincible Season 3).jpeg">
+    </div>
+    <h2>Testimonios</h2>
+    {{#each testimonios}}
+    {{>panel this}}
+    {{/each}}
+  </section>
+  <section class="nuevopanel">
+    <h2>Agrega tu Testimonio</h2>
+    <form id="formTestimonio">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="mensaje">Testimonio:</label>
+      <textarea id="mensaje" name="mensaje" required></textarea>
+
+      <button type="submit">Enviar Testimonio</button>
+    </form>
+    <script src="java/java.js"></script>
+  </section>
+</body>
+
+</html>
